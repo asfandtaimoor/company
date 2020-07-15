@@ -1,0 +1,35 @@
+@import "../about/about.component.scss";
+@import '../../styles.scss';
+.container {
+    margin: $marginTop auto auto auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 2em;
+    .project {
+        &:hover {
+            img {
+                filter: brightness(100%);
+                transform: translateY(-25px);
+            }
+            .detail {
+                .text {
+                    display: block;
+                }
+            }
+        }
+        position: relative;
+        img {
+            transition-duration: .5s;
+            filter: brightness(50%);
+            width: 100%;
+        }
+        .detail {
+            position: absolute;
+            @include center();
+            color: white;
+            .text {
+                display: none;
+            }
+        }
+    }
+}

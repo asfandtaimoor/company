@@ -1,0 +1,25 @@
+@import '../../../styles.scss';
+header {
+    display: flex;
+    justify-content: space-around;
+    font-size: $headerFontSize;
+    .logo {
+        font-size: $logoFontSize;
+        font-weight: bold;
+        font-family: cursive, 'Modak';
+        p {
+            span {
+                color: $primaryColor;
+            }
+        }
+    }
+    nav {
+        a {
+            color: $textColor;
+            cursor: pointer;
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+    }
+}

@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+$backgroundColor:rgb(242, 244, 250);
+$primaryColor:rgb(253, 97, 33);
+$textColor:rgb(119, 119, 119);
+$footerTextColor:rgb(202, 202, 202);
+$headerFontSize:22px;
+$logoFontSize:28px;
+$marginTop:5em; // Marging top of every block
+$marginTopUnderBlock:3em; // distance in the block between heading and main data
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin hCenter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin vCenter {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+body {
+    background-color: $backgroundColor;
+}
+
+.btn-pill {
+    background-color: $primaryColor;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+}

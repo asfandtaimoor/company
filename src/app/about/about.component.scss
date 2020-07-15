@@ -1,0 +1,78 @@
+@import '../../styles';
+header {
+    background-image: url("https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+    width: 100%;
+    height: 70vh;
+    background-position: bottom;
+    position: relative;
+    .text {
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+    }
+}
+
+.home {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: $marginTop;
+    grid-gap: 20px;
+    .elem {
+        img {
+            width: 100%;
+        }
+    }
+    .elem-2 {
+        .d-text {
+            margin: 30px 0;
+            background-color: rgba(245, 72, 3, 0.1);
+            p {
+                padding: 20px;
+            }
+        }
+    }
+}
+
+.container-2 {
+    .container-inner {
+        margin-top: $marginTop;
+        background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80");
+        height: 50vh;
+        background-attachment: fixed;
+        background-size: cover;
+        .detail {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            .text {
+                color: white;
+                @include center();
+                .btn {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+// accordion
+.accordion {
+    margin-top: $marginTop;
+    padding: 0;
+    .card {
+        margin-bottom: 10px;
+        .card-header {
+            background-color: $primaryColor;
+            .btn-link {
+                color: white;
+                font-size: 24px;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

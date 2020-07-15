@@ -1,0 +1,91 @@
+@import "../about/about.component.scss";
+@import '../../styles.scss';
+
+/* Set the size of the div element that contains the map */
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+.contact {
+    margin-top: $marginTop;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .form-block {
+        padding: 20px;
+        min-width: 340px;
+        form {
+            margin-top: $marginTopUnderBlock;
+            .row {
+                .col-md-6 {
+                    padding: 0;
+                    &:first-child {
+                        padding-right: 20px;
+                    }
+                }
+            }
+            button {
+                font-size: 24px;
+                padding: 10px 30px;
+            }
+        }
+    }
+    // Contact detail
+    .contact-detail {
+        padding: 20px;
+        .contact-info {
+            width: 100%;
+            .media {
+                margin-top: $marginTopUnderBlock;
+                display: grid;
+                grid-template-columns: auto auto;
+                .media-elem {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 0 20px 20px 0;
+                    i {
+                        font-size: 30px;
+                        padding: 10px 20px;
+                        color: white;
+                        background-color: $primaryColor;
+                    }
+                    .detail {
+                        padding-left: 10px;
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .contact {
+        .form-block {
+            form {}
+        }
+    }
+}
+
+// delete the right row padding
+@media screen and (max-width:576px) {
+    .contact {
+        .form-block {
+            form {
+                .row {
+                    .col-md-6 {
+                        padding: 0;
+                        &:first-child {
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
