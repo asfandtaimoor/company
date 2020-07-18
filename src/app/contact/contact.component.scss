@@ -12,11 +12,8 @@
 
 .contact {
     margin-top: $marginTop;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     .form-block {
-        padding: 20px;
-        min-width: 340px;
         form {
             margin-top: $marginTopUnderBlock;
             .row {
@@ -35,20 +32,22 @@
     }
     // Contact detail
     .contact-detail {
-        padding: 20px;
         .contact-info {
             width: 100%;
             .media {
                 margin-top: $marginTopUnderBlock;
-                display: grid;
-                grid-template-columns: auto auto;
+                display: flex;
+                flex-wrap: wrap;
                 .media-elem {
+                    min-width: 180px;
                     display: flex;
                     flex-direction: row;
                     margin: 0 20px 20px 0;
                     i {
                         font-size: 30px;
                         padding: 10px 20px;
+                        width: 63px;
+                        height: 51px;
                         color: white;
                         background-color: $primaryColor;
                     }
@@ -66,9 +65,7 @@
 
 @media screen and (max-width:768px) {
     .contact {
-        .form-block {
-            form {}
-        }
+        flex-direction: column;
     }
 }
 

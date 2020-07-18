@@ -1,0 +1,67 @@
+@import './../../styles.scss';
+@import '../about/about.component.scss';
+.container {
+    margin-top: $marginTop;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+    .main {
+        grid-template-columns: auto;
+        .card {
+            width: auto;
+        }
+        .share {
+            margin-top: $marginTopUnderBlock;
+            color: $textColor;
+            .elem {
+                display: flex;
+                .icons {
+                    font-size: 32px;
+                    i {
+                        padding: 10px 20px;
+                        background-color: rgb(219, 219, 219);
+                        margin-left: 10px;
+                        cursor: pointer;
+                        &:hover {
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+        }
+        form {
+            margin: $marginTopUnderBlock;
+            h2 {
+                margin: 1.3em 0;
+                color: $textColor;
+            }
+            .row {
+                .col-md-6 {
+                    padding: 0;
+                }
+                .col-2nd {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .aside {
+        .card {
+            margin-bottom: 20px;
+            padding: 20px;
+            a {
+                color: $textColor;
+                &:hover {
+                    color: $primaryColor;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:768px) {
+    .container {
+        grid-template-columns: auto;
+    }
+}

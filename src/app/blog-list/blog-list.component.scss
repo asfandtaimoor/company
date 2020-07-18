@@ -1,0 +1,55 @@
+@import '../../styles.scss';
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+    .main {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 25px;
+        .card {
+            max-width: 350px;
+            .card-body {
+                .card-title {
+                    cursor: pointer;
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                }
+                .read-more {
+                    cursor: pointer;
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+    .aside {
+        .card {
+            margin-bottom: 20px;
+            padding: 20px;
+            a {
+                color: $textColor;
+                &:hover {
+                    color: $primaryColor;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:768px) {
+    .container {
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and(max-width:425px) {
+    .container {
+        .main {
+            grid-template-columns: auto;
+        }
+    }
+}

@@ -9,6 +9,9 @@ import { ServicesComponent } from './services/services.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { CoreModule } from './core/core.module';
+import { Home2Component } from './home2/home2.component';
+import { BlogListComponent } from './blog-list/blog-list.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,13 @@ import { CoreModule } from './core/core.module';
     ServicesComponent,
     PortfolioComponent,
 
-    ContactComponent
+    ContactComponent,
+
+    Home2Component,
+
+    BlogListComponent,
+
+    BlogDetailComponent
   ],
   imports: [
     BrowserModule,

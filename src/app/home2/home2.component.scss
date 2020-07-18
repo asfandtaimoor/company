@@ -1,0 +1,90 @@
+@import './../../styles.scss';
+@import '../portfolio/portfolio.component.scss';
+$pictureBorderRadius:100px;
+.projects {
+    margin-top: $marginTop;
+    display: flex;
+    .text-block {
+        flex-basis: 50%;
+        .text {
+            p {
+                margin-top: 30px;
+                font-size: 18px;
+                color: $textColor;
+            }
+            .btn {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+        .projects-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: $marginTopUnderBlock;
+            .elem {
+                background-color: white;
+                margin: 10px;
+                padding: 40px;
+                border-radius: 10%;
+                box-shadow: 0 0 7px 0 black;
+                h2 {
+                    color: $primaryColor;
+                }
+                p {
+                    color: $textColor;
+                }
+            }
+        }
+    }
+    .picture {
+        flex-basis: 50%;
+        img {
+            overflow: hidden;
+            border-bottom-left-radius: $pictureBorderRadius;
+            border-top-right-radius: $pictureBorderRadius;
+            width: 100%;
+        }
+    }
+}
+
+.history {
+    margin-top: $marginTop;
+    display: flex;
+    background-color: $textColor;
+    color: $footerTextColor;
+    padding: 2em;
+    .elem {
+        margin: 0 2em;
+    }
+}
+
+.project-header {
+    margin-top: $marginTop;
+    text-align: center;
+    h2 {
+        color: rgb(61, 61, 61);
+        ;
+    }
+    p {
+        color: $textColor;
+    }
+}
+
+@media screen and(max-width:768px) {
+    .projects {
+        flex-direction: column;
+        .picture {
+            margin-top: $marginTopUnderBlock;
+        }
+        .text-block {
+            .projects-boxes {
+                .elem {
+                    margin: 10px auto;
+                }
+            }
+        }
+    }
+    .history {
+        flex-direction: column;
+    }
+}
