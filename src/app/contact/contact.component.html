@@ -17,24 +17,26 @@
         <form>
             <div class="row form-group ">
                 <div class="col-md-6 col-sm-6 form-group">
-                    <input type="text" class="form-control" placeholder="First name" required>
+                    <input name="firstName" id="firstName" type="text" class="form-control" placeholder="First Name" required>
+
                 </div>
                 <div class="col-md-6 col-sm-6 ">
-                    <input type="text" class="form-control" placeholder="Last name" required>
+                    <input type="text" class="form-control" placeholder="Last name" ngModel required>
                 </div>
             </div>
             <div class="row form-group">
-                <input type="tel" name="tel" class="form-control" placeholder="Phone *" required>
+                <input type="tel" name="tel" class="form-control" placeholder="Phone *" ngModel required>
             </div>
             <div class="row form-group">
-                <input type="email" name="email" class="form-control" placeholder="Email *" required>
+                <input type="email" name="email" class="form-control" placeholder="Email *" ngModel required>
             </div>
 
             <div class="row form-group">
-                <textarea placeholder="Message" class="form-control" required></textarea>
+                <textarea placeholder="Message" class="form-control" ngModel required></textarea>
             </div>
 
-            <button class="btn-pill " type="submit">Submit</button>
+            <button type="submit" class="btn btn-pill">Send</button>
+
         </form>
     </div>
 
