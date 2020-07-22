@@ -1,187 +1,176 @@
-@import '../../styles.scss';
-.carousel {
-    height: 100vh;
-    .carousel-inner {
-        .carousel-item {
-            img {
-                height: 100vh;
-            }
+    @import '../../styles.scss';
+    .provide {
+        max-width: 1100px;
+        margin: $marginTop auto 0 auto;
+        .heading {
+            text-align: center;
         }
-    }
-}
-
-.provide {
-    max-width: 1100px;
-    margin: $marginTop auto 0 auto;
-    .heading {
-        text-align: center;
-    }
-    .block {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        margin-top: $marginTopUnderBlock;
-        grid-gap: 20px;
-        .block__elem {
-            display: flex;
-            .logo {
-                i {
-                    color: $primaryColor;
-                    margin-right: 10px;
-                    font-size: 50px;
-                }
-            }
-        }
-    }
-}
-
-// Why us
-.why-us {
-    margin-top: $marginTop;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    img {
-        width: 100%;
-    }
-    .detail {
-        position: absolute;
-        @include center();
-        .text {
-            p {
-                color: rgba(0, 0, 0, 0.5);
-            }
-        }
-        .projects {
-            margin-top: 2em;
-            display: flex;
-            .projects__elelm {
-                padding: 30px;
-                margin-left: 20px;
-                background-color: white;
-                border-radius: 20px;
-                h2 {
-                    color: $primaryColor;
-                }
-                h5 {
-                    color: $footerTextColor;
-                }
-            }
-        }
-    }
-}
-
-// Team
-.team {
-    max-width: 1100px;
-    margin: $marginTop auto 0 auto;
-    .heading {
-        text-align: center;
-        h5 {
-            color: $textColor;
-        }
-    }
-    .card-deck {
-        margin-top: $marginTopUnderBlock;
-        width: 100%;
-        overflow: hidden;
-        margin-left: 0;
-        .card {
-            .card-body {
-                h6 {
+        .block {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            margin-top: $marginTopUnderBlock;
+            grid-gap: 20px;
+            .block__elem {
+                display: flex;
+                .logo {
                     i {
-                        margin-left: 10px;
+                        color: $primaryColor;
+                        margin-right: 10px;
+                        font-size: 50px;
                     }
                 }
-                .card-text {
-                    color: $textColor;
+            }
+        }
+    }
+    
+    // Why us
+    .why-us {
+        margin-top: $marginTop;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+        .detail {
+            position: absolute;
+            @include center();
+            .text {
+                p {
+                    color: rgba(0, 0, 0, 0.5);
+                }
+            }
+            .projects {
+                margin-top: 2em;
+                display: flex;
+                .projects__elelm {
+                    padding: 30px;
+                    margin-left: 20px;
+                    background-color: white;
+                    border-radius: 20px;
+                    h2 {
+                        color: $primaryColor;
+                    }
+                    h5 {
+                        color: $footerTextColor;
+                    }
                 }
             }
         }
     }
-}
-
-// messages
-.message {
-    margin-top: $marginTop;
-    background-image: url("https://images.unsplash.com/photo-1542330952-bffc55e812b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
-    height: 70vh;
-    background-attachment: fixed;
-    background-size: cover;
-    .detail {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        .text {
-            color: white;
-            @include center();
+    
+    // Team
+    .team {
+        max-width: 1100px;
+        margin: $marginTop auto 0 auto;
+        .heading {
+            text-align: center;
+            h5 {
+                color: $textColor;
+            }
         }
-    }
-}
-
-// News
-.news {
-    max-width: 1100px;
-    margin: 5em auto 0 auto;
-    .heading {
-        text-align: center;
-        h5 {
-            color: $textColor;
-        }
-    }
-    .card-deck {
-        width: 100%;
-        overflow: hidden;
-        margin-left: 0;
-        margin-top: $marginTopUnderBlock;
-        .card {
-            .card-body {
-                .date {
-                    display: flex;
-                    text-decoration: none;
-                    color: $textColor;
-                    p {
-                        &:hover {
-                            color: $primaryColor;
+        .card-deck {
+            margin-top: $marginTopUnderBlock;
+            width: 100%;
+            overflow: hidden;
+            margin-left: 0;
+            .card {
+                .card-body {
+                    h6 {
+                        i {
+                            margin-left: 10px;
                         }
                     }
-                }
-                .card-text {
-                    color: $textColor;
+                    .card-text {
+                        color: $textColor;
+                    }
                 }
             }
         }
     }
-}
-
-// For Tabs
-@media screen and (max-width:768px) {
-    .provide {
-        .block {
-            grid-template-columns: auto auto;
-        }
-    }
-}
-
-// For Mobiles
-@media screen and (max-width:425px) {
-    .provide {
-        .block {
-            grid-template-columns: auto;
-            margin: 10px;
-        }
-    }
-    .team {
-        .card-deck {
-            .card {
-                margin: 10px;
+    
+    // messages
+    .message {
+        margin-top: $marginTop;
+        background-image: url("https://images.unsplash.com/photo-1542330952-bffc55e812b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+        height: 70vh;
+        background-attachment: fixed;
+        background-size: cover;
+        .detail {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            .text {
+                color: white;
+                @include center();
             }
         }
     }
+    
+    // News
     .news {
+        max-width: 1100px;
+        margin: 5em auto 0 auto;
+        .heading {
+            text-align: center;
+            h5 {
+                color: $textColor;
+            }
+        }
         .card-deck {
+            width: 100%;
+            overflow: hidden;
+            margin-left: 0;
+            margin-top: $marginTopUnderBlock;
             .card {
-                margin: 10px;
+                .card-body {
+                    .date {
+                        display: flex;
+                        text-decoration: none;
+                        color: $textColor;
+                        p {
+                            &:hover {
+                                color: $primaryColor;
+                            }
+                        }
+                    }
+                    .card-text {
+                        color: $textColor;
+                    }
+                }
             }
         }
     }
-}
+    
+    // For Tabs
+    @media screen and (max-width:768px) {
+        .provide {
+            .block {
+                grid-template-columns: auto auto;
+            }
+        }
+    }
+    
+    // For Mobiles
+    @media screen and (max-width:425px) {
+        .provide {
+            .block {
+                grid-template-columns: auto;
+                margin: 10px;
+            }
+        }
+        .team {
+            .card-deck {
+                .card {
+                    margin: 10px;
+                }
+            }
+        }
+        .news {
+            .card-deck {
+                .card {
+                    margin: 10px;
+                }
+            }
+        }
+    }

@@ -4,34 +4,40 @@
         <p><span>A_</span>Taimoor<span>.</span></p>
     </div>
 
-    <nav class="nav">
+    <i class="fas fa-bars" id='menuBars' (click)="showMenu()"></i>
+
+
+
+
+    <nav class="nav" id="navLinks">
+        <i class="fas fa-times" id='menuTimes' (click)="hideMenu()"></i>
         <a class="btn-group nav-link">
             <a type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Home
+                Home
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" routerLink="./home">Home1</a>
-                <a class="dropdown-item" routerLink="./home2">Home2</a>
+                <a class="dropdown-item" routerLink="./home" (click)='hideMenu()'>Home1</a>
+                <a class="dropdown-item" routerLink="./home2" (click)='hideMenu()'>Home2</a>
             </div>
         </a>
-        <a class="nav-link" routerLink="/about">About</a>
-        <a class="nav-link" routerLink="/services">Service</a>
-        <a class="nav-link" routerLink="/portfolio">Portfolio</a>
+        <a class="nav-link" routerLink="/about" (click)='hideMenu()'>About</a>
+        <a class="nav-link" routerLink="/services" (click)='hideMenu()'>Service</a>
+        <a class="nav-link" routerLink="/portfolio" (click)='hideMenu()'>Portfolio</a>
         <a class="btn-group nav-link">
             <a type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Blog
+                Blog
             </a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" routerLink="./blog-list">Blog List</a>
-                <a class="dropdown-item" routerLink="./blog-detail">Blog Detail</a>
+                <a class="dropdown-item" routerLink="./blog-list" (click)='hideMenu()'>Blog List</a>
+                <a class="dropdown-item" routerLink="./blog-detail" (click)='hideMenu()'>Blog Detail</a>
             </div>
         </a>
-        <a class="nav-link" routerLink="/contact">Contact</a>
+        <a class="nav-link" routerLink="/contact" (click)='hideMenu()'>Contact</a>
     </nav>
 
 
-    <div class="menu">
-        <i nz-icon nzType="menu" nzTheme="outline"></i>
-        <i nz-icon nzType="close" nzTheme="outline"></i>
-    </div>
+
+
+
+
 </header>
