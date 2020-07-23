@@ -9,6 +9,9 @@ footer {
     padding: 3em;
     color: $footerTextColor;
     .elem {
+        h3 {
+            color: white
+        }
         nav {
             display: flex;
             flex-direction: column;
@@ -28,6 +31,7 @@ footer {
     .elem__1 {
         .text {
             h1 {
+                color: white;
                 span {
                     color: $primaryColor;
                 }

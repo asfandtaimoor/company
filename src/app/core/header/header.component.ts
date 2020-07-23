@@ -22,7 +22,10 @@ export class HeaderComponent implements OnInit {
   }
 
   hideMenu(){
-    document.getElementById('navLinks').style.display='none'; 
-    }
+  
+    if (window.innerWidth < 820) {
+      document.getElementById('navLinks').style.display='none';
+     }
+  }
 
 }
